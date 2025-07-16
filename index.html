@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YMPA 2025 - Young Milton Park Association</title>
+    <title>YMPA 2025</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
             --accent-purple: #7C3AED;
             --accent-blue: #2563EB;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.7;
@@ -57,7 +57,7 @@
             .top-info-bar {
                 text-align: center;
             }
-            
+
             .top-info-bar a {
                 display: block;
                 margin: 5px 0;
@@ -138,13 +138,6 @@
 
         .service-card:hover::before {
             opacity: 0.1;
-        }
-
-        .service-card .price-range {
-            color: var(--primary);
-            font-weight: 600;
-            margin-top: 10px;
-            font-size: 0.9rem;
         }
 
         .service-list {
@@ -332,7 +325,7 @@
         Made by Niko
         <div class="toast-progress"></div>
     </div>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#" id="ympa-logo">YMPA</a>
@@ -379,7 +372,6 @@
                         <div class="card-body">
                             <h5 class="card-title">Childcare Services</h5>
                             <p class="card-text">Professional and responsible babysitting services for your children.</p>
-                            <div class="price-range">$15-25/hour</div>
                             <ul class="service-list">
                                 <li>After-school care</li>
                                 <li>Weekend babysitting</li>
@@ -393,7 +385,6 @@
                         <div class="card-body">
                             <h5 class="card-title">Pet Care</h5>
                             <p class="card-text">Reliable pet care services for your furry family members.</p>
-                            <div class="price-range">$15-30/hour</div>
                             <ul class="service-list">
                                 <li>Dog walking</li>
                                 <li>Pet sitting</li>
@@ -408,7 +399,6 @@
                         <div class="card-body">
                             <h5 class="card-title">Home & Garden</h5>
                             <p class="card-text">Comprehensive home and garden maintenance services.</p>
-                            <div class="price-range">$20-40/hour</div>
                             <ul class="service-list">
                                 <li>Gardening & lawn care</li>
                                 <li>Basic home repairs</li>
@@ -467,18 +457,18 @@
     <script>
         let clickCount = 0;
         const clickSound = new Audio('NEOW MEME SOUND EFFECT(MP3_160K).mp3');
-        
+
         document.getElementById('ympa-logo').addEventListener('click', function(e) {
             e.preventDefault();
             clickCount++;
-            
+
             if (clickCount === 3) {
                 clickSound.play();
                 const toast = document.getElementById('toast-notification');
                 toast.classList.add('show');
                 setTimeout(() => {
                     toast.classList.remove('show');
-                    clickCount = 0; // Reset counter after showing toast
+                    clickCount = 0;
                 }, 3000);
             }
         });
